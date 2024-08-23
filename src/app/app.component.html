@@ -6,7 +6,7 @@
       <button (click)="increment()">+</button>
     </div>
     <div class="input-field">
-      <input [(ngModel)]="countInputVal" type="number" placeholder="Enter a number">
+      <input (keydown.enter)="increaseBy()" [(ngModel)]="countInputVal" type="number" placeholder="Enter a number">
       <button (click)="increaseBy()">Add to Counter</button>
     </div>
     <span (click)="reset()" class="counter-reset-btn">
